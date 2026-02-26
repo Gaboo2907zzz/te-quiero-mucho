@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti</title>
+    <style>
+        body {
+            background-color: #ffb6c1; /* Fondo rosado */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        /* Contenedor principal para centrar todo */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Corazón Pixel Art Grande */
+        .pixel-heart {
+            position: relative;
+            width: 200px; /* Tamaño base aumentado */
+            height: 180px;
+            margin-bottom: 60px; /* Espacio para el mensaje */
+            animation: pixelBeat 1.2s infinite steps(2);
+        }
+
+        /* Dibujo del corazón con sombras */
+        .pixel-heart::before {
+            content: "";
+            position: absolute;
+            width: 20px; /* Cada "píxel" es de 20px ahora */
+            height: 20px;
+            background: transparent;
+
+            /* Diseño escalado: bordes negros y centro rojo */
+            box-shadow:
+                /* Borde Negro Superior */
+                40px 0px 0 #000, 60px 0px 0 #000, 120px 0px 0 #000, 140px 0px 0 #000,
+                20px 20px 0 #000, 80px 20px 0 #000, 100px 20px 0 #000, 160px 20px 0 #000,
+                0px 40px 0 #000, 180px 40px 0 #000,
+                0px 60px 0 #000, 180px 60px 0 #000,
+                0px 80px 0 #000, 180px 80px 0 #000,
+                20px 100px 0 #000, 160px 100px 0 #000,
+                40px 120px 0 #000, 140px 120px 0 #000,
+                60px 140px 0 #000, 120px 140px 0 #000,
+                80px 160px 0 #000, 100px 160px 0 #000,
+                
+                /* Relleno Rojo */
+                40px 20px 0 #ff0000, 60px 20px 0 #ff0000,
+                120px 20px 0 #ff0000, 140px 20px 0 #ff0000,
+                20px 40px 0 #ff0000, 40px 40px 0 #ff0000, 60px 40px 0 #ff0000, 80px 40px 0 #ff0000, 100px 40px 0 #ff0000, 120px 40px 0 #ff0000, 140px 40px 0 #ff0000, 160px 40px 0 #ff0000,
+                20px 60px 0 #ff0000, 40px 60px 0 #ff0000, 60px 60px 0 #ff0000, 80px 60px 0 #ff0000, 100px 60px 0 #ff0000, 120px 60px 0 #ff0000, 140px 60px 0 #ff0000, 160px 60px 0 #ff0000,
+                20px 80px 0 #ff0000, 40px 80px 0 #ff0000, 60px 80px 0 #ff0000, 80px 80px 0 #ff0000, 100px 80px 0 #ff0000, 120px 80px 0 #ff0000, 140px 80px 0 #ff0000, 160px 80px 0 #ff0000,
+                40px 100px 0 #ff0000, 60px 100px 0 #ff0000, 80px 100px 0 #ff0000, 100px 100px 0 #ff0000, 120px 100px 0 #ff0000, 140px 100px 0 #ff0000,
+                60px 120px 0 #ff0000, 80px 120px 0 #ff0000, 100px 120px 0 #ff0000, 120px 120px 0 #ff0000,
+                80px 140px 0 #ff0000, 100px 140px 0 #ff0000;
+        }
+
+        .text-container {
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .linea1 {
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .linea2 {
+            color: #444;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        @keyframes pixelBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="pixel-heart"></div>
+
+        <div class="text-container">
+            <span class="linea1">Te quiero mucho señorita</span>
+            <span class="linea2">espero que te guste mucho este detalle</span>
+        </div>
+    </div>
+
+</body>
+</html>
